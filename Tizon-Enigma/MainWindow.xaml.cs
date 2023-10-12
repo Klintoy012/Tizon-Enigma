@@ -424,7 +424,7 @@ namespace Tizon_Enigma
                             EnigmaClass.ringContentSeparator();
                             ringC.Text = "Ring Count : " + EnigmaClass.ringCount();
                             rCount.Text = "Character Count per Ring : " + EnigmaClass.ringContentCount();
-                            MessageBox.Show("Rings File has been Read and Formatted successfully! Please Proceed with the setup.\nFeel free to select another csv file that contains rings if you want.", "Enigma", MessageBoxButton.OK, MessageBoxImage.Information);
+                            MessageBox.Show("The 'Rings' file has been read and formatted successfully. \nYou can now proceed with the setup. \nIf you wish to select another CSV file containing rings, please feel free to do so.", "Enigma", MessageBoxButton.OK, MessageBoxImage.Information);
 
                             ToggleControls(true);
                         }
@@ -630,7 +630,7 @@ namespace Tizon_Enigma
         private void btnSet_Click(object sender, RoutedEventArgs e)
         {
             btnSetIsClicked = true;
-            if (MessageBox.Show("Are you sure you want to LOCK THE SELECTION?", "Enigma", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            if (MessageBox.Show("Are you sure you want to Lock the Selection?", "Enigma", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 MessageBox.Show("Enigma will hide the setup.\nPlease TAKE NOTE of the setup of your Enigma Machine", "Enigma", MessageBoxButton.OK, MessageBoxImage.Warning);
                 EnigmaClass.offsetRotors();
@@ -1232,8 +1232,8 @@ namespace Tizon_Enigma
 
         private void btnReset_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Enigma is going to RESET setup", "Enigma", MessageBoxButton.OK, MessageBoxImage.Warning);
-            if (MessageBox.Show("Are you sure you want to RESET enigma setup?", "Enigma", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            MessageBox.Show("Enigma is about to reset the setup.", "Enigma", MessageBoxButton.OK, MessageBoxImage.Warning);
+            if (MessageBox.Show("Are you sure you want to reset Enigma setup?", "Enigma", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 //tbxRingFilePath.Text = "";
                 //lblRingCount.Content = "Ring Count: ";
@@ -1272,7 +1272,7 @@ namespace Tizon_Enigma
                     key[x].Fill = originalColor;
                     keyLabels[x].Foreground = labelOriginalColor;
                 }
-                MessageBox.Show("The Enigma setup is RESET.\nSelect another setup that you want.\nFeel free to select another csv file that contains rings if you want, then setup again your Enigma.", "Enigma", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Enigma setup has been reset.\nChoose a new setup or import a CSV with ring configurations to configure your Enigma.", "Enigma", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 
@@ -1541,7 +1541,7 @@ namespace Tizon_Enigma
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (MessageBox.Show("Do you want to CLOSE Enigma Machine?", "Enigma", MessageBoxButton.OKCancel, MessageBoxImage.Information) == MessageBoxResult.OK)
+            if (MessageBox.Show("Do you want to Close Enigma Machine?", "Enigma", MessageBoxButton.OKCancel, MessageBoxImage.Information) == MessageBoxResult.OK)
             {
                 Environment.Exit(0);
             }
